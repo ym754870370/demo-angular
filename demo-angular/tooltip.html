@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+  <title>demo</title>
+</head>
+<body>
+
+  <div ng-app="myApp" ng-controller="myCtrl">
+  姓名：<input type="text" ng-model="name"><br>
+  账号: <input type="text" ng-model="number"><br>
+  姓名和账号：{{allcases()}}
+
+  <div class="tooltip" ng-repeat="item in items"></div>
+  </div>
+
+
+  <script>
+  var app = angular.module('myApp',[]);
+  app.controller('myCtrl',function($scope){
+    $scope.name = "杨明";
+    $scope.number = "123456";
+    $scope.allcases = function(){
+      return $scope.name + " " + $scope.number;
+    }
+    $scope.items = [
+      {title:'访客'},
+      {tooltip:'在某某某 搜索是是是是'}
+    ]
+  });
+  </script>
+
+
+
+</body>
+</html>

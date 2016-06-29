@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+  <title>function(){}== =></title>
+</head>
+<body>
+
+<div ng-app="ming" ng-controller="mingCtrl">
+  <p>缓冲中</p>
+  <h1>{{show}}</h1>
+</div>
+
+<script>
+  var app = angular.module("ming",[]);
+  app.controller("mingCtrl", function($scope,$timeout){
+    $scope.show = "你看见了什么吗？";
+    $timeout(function () {
+      $scope.show = "你看见的东东还在么？";
+    },3000);
+  });
+</script>
+
+</body>
+</html>

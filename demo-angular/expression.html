@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+  <title>demo</title>
+</head>
+<body>
+
+<div ng-app="" ng-model="name='ming';number='5555'">
+  <p>{{name + ' ' + number}}</p>
+
+  <div  ng-model="person={demo:'ss',case:'sss'}">
+    <p>行为{{person.demo  }}</p>
+  </div>
+
+
+
+  <div ng-model="point=[1,2,55,33,88]">
+    <p>3: <span ng-bind="point[2]"></span> </p>
+  </div>
+</div>
+
+
+</body>
+</html>

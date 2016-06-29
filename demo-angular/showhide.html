@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+  <title>function(){}== =></title>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+  <button ng-click="sh()">show/hide</button>
+  <p ng-hide="hide">
+    <input ng-model="ming"><br>
+    {{ming}}
+  </p>
+</div>
+
+<script>
+  var app = angular.module("myApp",[]);//[]中存放如果存在依赖关系的模块名称
+  app.controller("myCtrl",function($scope){
+    $scope.ming = "帅明",
+    $scope.hide = false;
+    $scope.sh = function(){
+      $scope.hide = !$scope.hide;
+    };
+  });
+</script>
+
+
+</body>
+</html>

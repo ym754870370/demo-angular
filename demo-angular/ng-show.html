@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+  <title>demo</title>
+</head>
+<body ng-app="">
+  <form  name="myForm">
+  Email:
+  <input type="email" name="myAddress" ng-model="text" >
+  <span ng-show="myForm.myAddress.$error.email">不是一个合法的邮箱地址</span>
+  </form>
+
+
+  <form name="myForm" ng-init="myText = 'test@runoob.com'">
+    Email:
+    <input type="email" name="myAddress" ng-model="myText" >
+    <h1>状态</h1>
+    {{myForm.myAddress.$valid}}
+    {{myForm.myAddress.$dirty}}
+    {{myForm.myAddress.$touched}}
+  </form>
+
+
+</body>
+</html>

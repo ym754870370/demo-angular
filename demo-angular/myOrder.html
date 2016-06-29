@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+  <title>demo</title>
+</head>
+<body ng-app="myApp">
+  <rd></rd><!--元素名-->
+  <div rd></div><!--属性-->
+  <div class="rd"></div><!--类名-->
+  <!-- 指令：rd -->
+
+
+  <script>
+  var app = angular.module("myApp", []);
+  app.directive("rd",function(){
+    // .directive函数添加自定义的指令
+    return {
+      restrict : "C",//限制在HTML中调用的类型
+      template : "<h1>自定义指令！</h1>"
+    };
+  });
+  </script>
+
+
+
+
+</body>
+</html>

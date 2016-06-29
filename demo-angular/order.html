@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+  <title>demo</title>
+</head>
+<body>
+
+<div ng-app="">
+  <div ng-model="names=['萨萨','达达','样美女']">
+    <ul>
+      <li ng-repeat="x in names"><!--用ng-repeat遍历数组-->
+        {{x}}
+      </li>
+    </ul>
+  </div>
+
+  <div ng-model="number=[{name:'杨明',number:'99'},{name:'杨明',number:'99'},{name:'杨明',number:'99'},{name:'杨明',number:'99'}]">
+    <ul>
+      <li ng-repeat="x in number">{{x.name + ',' + x.number}}</li>
+      <!--用ng-repeat遍历对象属性-->
+    </ul>
+  </div>
+</div>
+
+
+</body>
+</html>
